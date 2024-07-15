@@ -1,5 +1,16 @@
-# Vue 3 + Vite
+数促-前端复试笔试题
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+一、制作出一个弹窗小组件：
+可以使用任意技术栈，任意第三方组件改进或者完全自己制作：
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+前端做一个文件上传页面，支持上传各种类型的文件，包括word、pdf、excel、音频、视频等
+提供多文件上传功能，文件勾选
+提供文件删除、预览、查询、下载、编辑等
+
+
+交付结果，三选一：
+1、源码
+2、工程文件
+3、可观看效果的地址
+
+![img.png](img.png)
