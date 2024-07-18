@@ -1,6 +1,6 @@
 <script setup>
 import FileViewer from "./FileViewer.vue";
-import {reactive, watch} from "vue";
+import {reactive, ref, watch} from "vue";
 
 const props = defineProps({modalType: String || Boolean, record: Object, onEdit: Function})
 const emits = defineEmits(["update:open", 'edit'])
@@ -27,8 +27,10 @@ function handleOk() {
 }
 
 function handleClose() {
+  fileViewer.value?.clearFile()
   emits('update:modalType', false)
 }
+const fileViewer = ref(null)
 </script>
 
 <template>
@@ -48,6 +50,7 @@ function handleClose() {
         </a-form-item>
         <a-form-item label="文件渲染">
           <FileViewer :file="record.raw"
+                      ref="fileViewer"
                       class="max-h-96 overflow-auto"/>
         </a-form-item>
       </a-form>

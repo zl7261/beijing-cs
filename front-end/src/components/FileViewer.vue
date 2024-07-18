@@ -56,6 +56,20 @@ function loadFileContent() {
   }
 }
 
+function clearFile() {
+  if (isText.value) {
+    URL.revokeObjectURL(isText.value)
+  } else if (isImage.value) {
+    URL.revokeObjectURL(isImage.value)
+  } else if (isPDF.value) {
+    URL.revokeObjectURL(isPDF.value)
+  } else if (isXlsx.value) {
+    URL.revokeObjectURL(isXlsx.value)
+  }
+}
+
+defineExpose({clearFile})
+
 function loadTextContent() {
   const reader = new FileReader()
   reader.onload = () => {
@@ -66,6 +80,7 @@ function loadTextContent() {
 
 function loadImageContent() {
   imageUrl.value = URL.createObjectURL(props.file)
+
 }
 
 function loadPDFContent() {
